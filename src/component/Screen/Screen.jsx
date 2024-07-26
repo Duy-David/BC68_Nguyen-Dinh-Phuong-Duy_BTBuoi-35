@@ -40,7 +40,7 @@ const Screen = () => {
                   } else {
                     return (
                       <button
-                        className={isSelected ? "gheDangChon" : "ghe"}
+                        className={isSelected ? "gheDangChon" : "ghe hover:bg-slate-600"}
                         key={seatIndex}
                         onClick={() => handleGhe(seat)}
                       >
