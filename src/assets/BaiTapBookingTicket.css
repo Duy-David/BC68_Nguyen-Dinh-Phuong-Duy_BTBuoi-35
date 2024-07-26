@@ -105,8 +105,8 @@ body {
 }
 
 .gheDangChon {
-  background: rgb(109, 238, 109);
-  border: 3px solid rgb(109, 238, 109);
+  background: green;
+  border: 3px solid green;
   color: #000;
 
   cursor: pointer;
@@ -179,18 +179,10 @@ body {
 }
 
 .summary-table button {
-  background: none;
+  background: red;
   border: none;
-  color: red;
-  cursor: pointer;
+  color: black;
+  /* cursor: pointer; */
+  padding: 3px 12px;
 }
 
-.reserved {
-  background-color: red;
-  color: white;
-}
-
-.available {
-  background-color: green;
-  color: white;
-}

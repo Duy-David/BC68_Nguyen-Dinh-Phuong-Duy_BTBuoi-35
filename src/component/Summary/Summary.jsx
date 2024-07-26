@@ -1,6 +1,9 @@
 import React from "react";
+// import seatSlice, { bookSeat } from "../../redux/seatSlice";
+// import { useDispatch, useSelector } from "react-redux";
 
-const Summary = () => {
+const Summary = ({ arrGhe, gheDangDat, total }) => {
+  console.log(gheDangDat);
   return (
     <div className="summary-container">
       <h2>DANH SÁCH GHẾ BẠN CHỌN</h2>
@@ -23,30 +26,32 @@ const Summary = () => {
             <th>Hủy</th>
           </tr>
         </thead>
-        {/* <tbody>
-          {selectedSeats.map((seat, index) => (
-            <tr key={index}>
-              <td>{seat.soGhe}</td>
-              <td>
-                {seat.gia.toLocaleString("vi-VN", {
-                  style: "currency",
-                  currency: "VND",
-                })}
-              </td>
-              <td>
-                <button onClick={() => onSelectSeat(seat)}>X</button>
-              </td>
-            </tr>
-          ))}
-        </tbody> */}
+        <tbody>
+          {gheDangDat.map((item) => {
+            return (
+              <tr>
+                <th>{item.soGhe}</th>
+                <th>
+                  {item.gia.toLocaleString("vi-VN", {
+                    style: "currency",
+                    currency: "VND",
+                  })}
+                </th>
+                <th>
+                  <button>x</button>
+                </th>
+              </tr>
+            );
+          })}
+        </tbody>
         <tfoot>
           <tr>
             <td colSpan="2">Tổng tiền</td>
             <td>
-              {/* {total.toLocaleString("vi-VN", {
+              {total.toLocaleString("vi-VN", {
                 style: "currency",
                 currency: "VND",
-              })} */}
+              })}
             </td>
           </tr>
         </tfoot>
