@@ -1,18 +1,22 @@
 import React from "react";
-import seatSlice, { bookSeat } from "../../redux/seatSlice";
+import seatSlice, { bookSeat,removeSeat } from "../../redux/seatSlice";
 import Summary from "../Summary/Summary";
 import { useDispatch, useSelector } from "react-redux";
 // import seatSlice from "../../redux/seatSlice";
 const Screen = () => {
-  console.log(seatSlice);
-
+  // console.log(removeSeat)
+console.log(seatSlice)
   const { arrGhe, gheDangDat } = useSelector((state) => state.seatSlice);
-  console.log(arrGhe);
+  // console.log(arrGhe);
 
   const dispatch = useDispatch();
   const handleGhe = (seat) => {
     dispatch(bookSeat(seat));
   };
+  const removeGhe = (seat) => {
+    dispatch(removeSeat(seat));
+  };
+  console.log(removeGhe)
   const total = gheDangDat.reduce((sum, ghe) => sum + ghe.gia, 0);
   return (
     <div className="container">
@@ -57,8 +61,8 @@ const Screen = () => {
       <Summary
         arrGhe={arrGhe}
         gheDangDat={gheDangDat}
-        handleGhe={handleGhe}
         total={total}
+        removeGhe={removeGhe}
       />
     </div>
   );

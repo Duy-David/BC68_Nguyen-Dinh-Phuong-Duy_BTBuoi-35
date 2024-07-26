@@ -191,7 +191,7 @@ const initialState = {
       ],
     },
   ],
-  gheDangDat:[]
+  gheDangDat: [],
 };
 
 export const seatSlice = createSlice({
@@ -211,8 +211,15 @@ export const seatSlice = createSlice({
         state.gheDangDat.push(seat);
       }
     },
+    removeSeat: (state, actions) => {
+      const seat = actions.payload;
+      state.gheDangDat = state.gheDangDat.filter(
+        (ghe) => ghe.soGhe !== seat
+      );
+      console.log(state.gheDangDat)
+    },
   },
 });
 
-export const { bookSeat } = seatSlice.actions;
+export const { bookSeat, removeSeat } = seatSlice.actions;
 export default seatSlice.reducer;

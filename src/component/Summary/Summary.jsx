@@ -2,7 +2,7 @@ import React from "react";
 // import seatSlice, { bookSeat } from "../../redux/seatSlice";
 // import { useDispatch, useSelector } from "react-redux";
 
-const Summary = ({ arrGhe, gheDangDat, total }) => {
+const Summary = ({ arrGhe, gheDangDat, total,removeGhe }) => {
   console.log(gheDangDat);
   return (
     <div className="summary-container">
@@ -27,7 +27,7 @@ const Summary = ({ arrGhe, gheDangDat, total }) => {
           </tr>
         </thead>
         <tbody>
-          {gheDangDat.map((item) => {
+          {gheDangDat.map((item,index) => {
             return (
               <tr>
                 <th>{item.soGhe}</th>
@@ -38,7 +38,7 @@ const Summary = ({ arrGhe, gheDangDat, total }) => {
                   })}
                 </th>
                 <th>
-                  <button>x</button>
+                  <button key={index} onClick={()=>{removeGhe(item.soGhe)}}>x</button>
                 </th>
               </tr>
             );
