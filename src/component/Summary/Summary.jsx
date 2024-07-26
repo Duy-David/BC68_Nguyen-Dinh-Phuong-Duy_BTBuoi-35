@@ -38,7 +38,7 @@ const Summary = ({ arrGhe, gheDangDat, total,removeGhe }) => {
                   })}
                 </th>
                 <th>
-                  <button key={index} onClick={()=>{removeGhe(item.soGhe)}}>x</button>
+                  <button key={index} onClick={()=>{removeGhe(item.soGhe)}} className="hover:bg-gray-500">x</button>
                 </th>
               </tr>
             );
