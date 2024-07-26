@@ -5,9 +5,9 @@ import React from "react";
 const Summary = ({ arrGhe, gheDangDat, total,removeGhe }) => {
   console.log(gheDangDat);
   return (
-    <div className="summary-container">
-      <h2>DANH SÁCH GHẾ BẠN CHỌN</h2>
-      <div className="summary-seats">
+    <div className="summary-container grid-cols-1">
+      <h2 className="text-3xl">DANH SÁCH GHẾ BẠN CHỌN</h2>
+      <div className="summary-seats text-2xl">
         <div className="summary-item">
           <span className="reserved"></span>Ghế đã đặt
         </div>
@@ -18,7 +18,7 @@ const Summary = ({ arrGhe, gheDangDat, total,removeGhe }) => {
           <span className="available"></span>Ghế chưa chọn
         </div>
       </div>
-      <table className="summary-table">
+      <table className="summary-table text-2xl">
         <thead>
           <tr>
             <th>Số ghế</th>

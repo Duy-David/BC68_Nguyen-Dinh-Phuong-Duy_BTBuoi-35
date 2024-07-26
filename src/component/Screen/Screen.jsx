@@ -16,7 +16,7 @@ const Screen = () => {
   console.log(removeGhe);
   const total = gheDangDat.reduce((sum, ghe) => sum + ghe.gia, 0);
   return (
-    <div className="container">
+    <div className="container ">
       <div className="Screen ">
         <div className="screen-title">
           <h1 className=" m-8">Đặt vé xem phim tại Cyberlearn</h1>
