@@ -7,14 +7,14 @@ const Summary = ({ arrGhe, gheDangDat, total,removeGhe }) => {
   return (
     <div className="summary-container">
       <h2>DANH SÁCH GHẾ BẠN CHỌN</h2>
-      <div className="legend">
-        <div className="legend-item">
+      <div className="summary-seats">
+        <div className="summary-item">
           <span className="reserved"></span>Ghế đã đặt
         </div>
-        <div className="legend-item">
+        <div className="summary-item">
           <span className="selected"></span>Ghế đang chọn
         </div>
-        <div className="legend-item">
+        <div className="summary-item">
           <span className="available"></span>Ghế chưa chọn
         </div>
       </div>
@@ -46,8 +46,8 @@ const Summary = ({ arrGhe, gheDangDat, total,removeGhe }) => {
         </tbody>
         <tfoot>
           <tr>
-            <td colSpan="2">Tổng tiền</td>
-            <td>
+            <td >Tổng tiền</td>
+            <td colSpan="2">
               {total.toLocaleString("vi-VN", {
                 style: "currency",
                 currency: "VND",

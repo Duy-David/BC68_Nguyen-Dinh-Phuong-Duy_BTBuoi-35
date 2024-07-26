@@ -203,20 +203,14 @@ export const seatSlice = createSlice({
       const isSelected = state.gheDangDat.find(
         (ghe) => ghe.soGhe === seat.soGhe
       );
-      if (isSelected) {
-        state.gheDangDat = state.gheDangDat.filter(
-          (ghe) => ghe.soGhe !== seat.soGhe
-        );
-      } else {
+      if (!isSelected) {
         state.gheDangDat.push(seat);
       }
     },
     removeSeat: (state, actions) => {
       const seat = actions.payload;
-      state.gheDangDat = state.gheDangDat.filter(
-        (ghe) => ghe.soGhe !== seat
-      );
-      console.log(state.gheDangDat)
+      state.gheDangDat = state.gheDangDat.filter((ghe) => ghe.soGhe !== seat);
+      console.log(state.gheDangDat);
     },
   },
 });

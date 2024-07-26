@@ -135,33 +135,31 @@ body {
   border-radius: 8px;
 }
 
-.legend {
-  /* display: flex;
-  justify-content: space-around; */
+.summary-seats {
   margin:  20px 0;
 }
 
-.legend-item {
+.summary-item {
   display: flex;
   align-items: center;
 }
 
-.legend-item span {
+.summary-item span {
   display: inline-block;
   width: 20px;
   height: 20px;
   margin-right: 5px;
 }
 
-.legend .reserved {
+.summary-seats .reserved {
   background-color: orange;
 }
 
-.legend .selected {
+.summary-seats .selected {
   background-color: green;
 }
 
-.legend .available {
+.summary-seats .available {
   background-color: white;
   border: 3px solid orange; 
 }
